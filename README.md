@@ -1,6 +1,14 @@
 # ZionMetrics
 
-First of all, you must have MySQL installed and change the database connection settings accordingly to your own configuration at `/config`
+This is an under development API built with Elixir and Phoenix Framework.
+
+The purpose of this API is to allow you to generate custom metrics of your web application by catching custom events of users navigation.
+
+Feedbacks and pull requests are very welcome!
+
+## Getting Started
+
+First of all, you must have MySQL installed and change the database connection settings accordingly to your own configuration at `/config`.
 
 To start the app:
 
