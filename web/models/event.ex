@@ -13,6 +13,11 @@ defmodule ZionMetrics.Event do
     field :type
     field :value
     
-    timestamps
+    timestamps()
+  end
+
+  def changeset(event, params \\ %{}) do
+    event
+    |> cast(params, [:project, :version, :brand, :source, :side, :channel, :device, :route, :type, :value])
   end
 end

@@ -14,7 +14,7 @@ defmodule ZionMetrics.Repo.Migrations.CreateData do
       add :type, :string
       add :value, :string
       
-      timestamps
+      timestamps()
     end
   end
 end
