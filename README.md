@@ -22,7 +22,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 Ready to run in production? Please [check the deployment guides](http://www.phoenixframework.org/docs/deployment).
 
 ## Data insertion format
-```
+```javascript
 const xhr = new XMLHttpRequest();
 xhr.open('POST', 'http://localhost:4000/events', true);
 xhr.setRequestHeader('Content-Type', 'application/json');
