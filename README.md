@@ -1,4 +1,5 @@
 # ZionMetrics
+[![Build Status](https://travis-ci.org/victorspringer/zionMetrics.svg?branch=master)](https://travis-ci.org/victorspringer/zionMetrics)
 
 This is an under development API built with Elixir and Phoenix Framework.
 
