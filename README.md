@@ -11,20 +11,21 @@ Feedbacks and pull requests are very welcome!
 
 First of all, you must have MySQL installed and change the database connection settings accordingly to your own configuration at `/config`.
 
-To start the app:
+To start the API server:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate the database with `mix ecto.create && mix ecto.migrate`
   * Start Phoenix endpoint with `mix phoenix.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
 Ready to run in production? Please [check the deployment guides](http://www.phoenixframework.org/docs/deployment).
 
 ## Data insertion format
+
+Here is an example of a post request sent via JavaScript:
+
 ```javascript
 const xhr = new XMLHttpRequest();
-xhr.open('POST', 'http://localhost:4000/events', true);
+xhr.open('POST', 'http://localhost:4000/v1/events', true);
 xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.send(JSON.stringify({
   event: {

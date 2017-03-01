@@ -5,7 +5,7 @@ defmodule ZionMetrics.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/events", ZionMetrics do
+  scope "/v1/events", ZionMetrics do
     pipe_through :events
 
     resources "/events", EventController
