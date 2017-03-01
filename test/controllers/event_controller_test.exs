@@ -6,7 +6,7 @@ defmodule EventControllerTest do
 
     @opts Router.init([])
     test 'listing aggregation:click events data' do
-        conn = conn(:get, "/events/aggregation:click")
+        conn = conn(:get, "/v1/events/aggregation:click")
         response = Router.call(conn, @opts)
         assert response.status == 200
     end
