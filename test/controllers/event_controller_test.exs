@@ -4,12 +4,6 @@ defmodule EventControllerTest do
     alias ZionMetrics.Router
     alias ZionMetrics.Event
 
-    setup do
-        :ok = Ecto.Adapters.SQL.Sandbox.checkout(ZionMetrics.Repo)
-        Ecto.Adapters.SQL.Sandbox.mode(ZionMetrics.Repo, {:shared, self()})
-        :ok
-    end
-
     @opts Router.init([])
     test 'listing aggregation:click events data' do
         conn = conn(:get, "/events/aggregation:click")

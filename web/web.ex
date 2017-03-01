@@ -30,6 +30,7 @@ defmodule ZionMetrics.Web do
     quote do
       use Phoenix.Controller
 
+      alias ZionMetrics.Event
       alias ZionMetrics.Repo
       import Ecto
       import Ecto.Query
