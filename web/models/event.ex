@@ -1,5 +1,5 @@
-defmodule ZionMetrics.Event do
-  use ZionMetrics.Web, :model
+defmodule Metrics.Event do
+  use Metrics.Web, :model
 
   schema "events" do
     field :project

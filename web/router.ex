@@ -1,11 +1,11 @@
-defmodule ZionMetrics.Router do
-  use ZionMetrics.Web, :router
+defmodule Metrics.Router do
+  use Metrics.Web, :router
 
   pipeline :events do
     plug :accepts, ["json"]
   end
 
-  scope "/v1/events", ZionMetrics do
+  scope "/v1/events", Metrics do
     pipe_through :events
 
     resources "/events", EventController

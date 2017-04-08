@@ -1,4 +1,4 @@
-defmodule ZionMetrics.ModelCase do
+defmodule Metrics.ModelCase do
   @moduledoc """
   This module defines the test case to be used by
   model tests.
@@ -16,20 +16,20 @@ defmodule ZionMetrics.ModelCase do
 
   using do
     quote do
-      alias ZionMetrics.Repo
+      alias Metrics.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import ZionMetrics.ModelCase
+      import Metrics.ModelCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ZionMetrics.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Metrics.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ZionMetrics.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Metrics.Repo, {:shared, self()})
     end
 
     :ok
@@ -59,7 +59,7 @@ defmodule ZionMetrics.ModelCase do
   """
   def errors_on(struct, data) do
     struct.__struct__.changeset(struct, data)
-    |> Ecto.Changeset.traverse_errors(&ZionMetrics.ErrorHelpers.translate_error/1)
+    |> Ecto.Changeset.traverse_errors(&Metrics.ErrorHelpers.translate_error/1)
     |> Enum.flat_map(fn {key, errors} -> for msg <- errors, do: {key, msg} end)
   end
 end

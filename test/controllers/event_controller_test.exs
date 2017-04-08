@@ -1,8 +1,8 @@
 defmodule EventControllerTest do
     use ExUnit.Case, async: true
     use Plug.Test
-    alias ZionMetrics.Router
-    alias ZionMetrics.Event
+    alias Metrics.Router
+    alias Metrics.Event
 
     @opts Router.init([])
     test 'listing aggregation:click events data' do

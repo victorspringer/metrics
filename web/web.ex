@@ -1,12 +1,12 @@
-defmodule ZionMetrics.Web do
+defmodule Metrics.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use ZionMetrics.Web, :controller
-      use ZionMetrics.Web, :view
+      use Metrics.Web, :controller
+      use Metrics.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,13 +30,13 @@ defmodule ZionMetrics.Web do
     quote do
       use Phoenix.Controller
 
-      alias ZionMetrics.Event
-      alias ZionMetrics.Repo
+      alias Metrics.Event
+      alias Metrics.Repo
       import Ecto
       import Ecto.Query
 
-      import ZionMetrics.Router.Helpers
-      import ZionMetrics.Gettext
+      import Metrics.Router.Helpers
+      import Metrics.Gettext
     end
   end
 
@@ -47,9 +47,9 @@ defmodule ZionMetrics.Web do
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
 
-      import ZionMetrics.Router.Helpers
-      import ZionMetrics.ErrorHelpers
-      import ZionMetrics.Gettext
+      import Metrics.Router.Helpers
+      import Metrics.ErrorHelpers
+      import Metrics.Gettext
     end
   end
 
@@ -63,10 +63,10 @@ defmodule ZionMetrics.Web do
     quote do
       use Phoenix.Channel
 
-      alias ZionMetrics.Repo
+      alias Metrics.Repo
       import Ecto
       import Ecto.Query
-      import ZionMetrics.Gettext
+      import Metrics.Gettext
     end
   end
 

@@ -1,5 +1,5 @@
-defmodule ZionMetrics.ErrorView do
-  use ZionMetrics.Web, :view
+defmodule Metrics.ErrorView do
+  use Metrics.Web, :view
 
   def render("404.json", _assigns) do
     %{errors: %{detail: "Page not found"}}

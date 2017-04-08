@@ -1,7 +1,7 @@
-# ZionMetrics
-[![Build Status](https://travis-ci.org/victorspringer/zionMetrics.svg?branch=master)](https://travis-ci.org/victorspringer/zionMetrics)
+# Metrics
+[![Build Status](https://travis-ci.org/victorspringer/metrics.svg?branch=master)](https://travis-ci.org/victorspringer/metrics)
 
-This is an under development API built with Elixir and Phoenix Framework.
+This is an under development API built with Elixir Phoenix and MySQL.
 
 The purpose of this API is to allow you to generate custom metrics of your web application by catching custom events of users navigation.
 

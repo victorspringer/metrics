@@ -1,4 +1,4 @@
-defmodule ZionMetrics.ErrorHelpers do
+defmodule Metrics.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -21,9 +21,9 @@ defmodule ZionMetrics.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(ZionMetrics.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(Metrics.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(ZionMetrics.Gettext, "errors", msg, opts)
+      Gettext.dgettext(Metrics.Gettext, "errors", msg, opts)
     end
   end
 end

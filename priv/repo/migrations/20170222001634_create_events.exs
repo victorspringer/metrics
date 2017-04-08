@@ -1,4 +1,4 @@
-defmodule ZionMetrics.Repo.Migrations.CreateData do
+defmodule Metrics.Repo.Migrations.CreateData do
   use Ecto.Migration
 
   def change do

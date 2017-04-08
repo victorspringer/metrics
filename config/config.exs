@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :zionMetrics,
-  ecto_repos: [ZionMetrics.Repo]
+config :metrics,
+  ecto_repos: [Metrics.Repo]
 
 # Configures the endpoint
-config :zionMetrics, ZionMetrics.Endpoint,
+config :metrics, Metrics.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "69XseFy0zebJRkekGH1nQsurxQpafhOav+ijiA0UTHnv5aV49nabjOvngN6fEKXb",
-  render_errors: [view: ZionMetrics.ErrorView, accepts: ~w(json)],
-  pubsub: [name: ZionMetrics.PubSub,
+  render_errors: [view: Metrics.ErrorView, accepts: ~w(json)],
+  pubsub: [name: Metrics.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

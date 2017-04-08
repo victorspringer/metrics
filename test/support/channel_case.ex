@@ -1,4 +1,4 @@
-defmodule ZionMetrics.ChannelCase do
+defmodule Metrics.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -20,22 +20,22 @@ defmodule ZionMetrics.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias ZionMetrics.Repo
+      alias Metrics.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
 
       # The default endpoint for testing
-      @endpoint ZionMetrics.Endpoint
+      @endpoint Metrics.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ZionMetrics.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Metrics.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ZionMetrics.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Metrics.Repo, {:shared, self()})
     end
 
     :ok

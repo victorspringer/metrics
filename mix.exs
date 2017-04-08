@@ -1,8 +1,8 @@
-defmodule ZionMetrics.Mixfile do
+defmodule Metrics.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :zionMetrics,
+    [app: :metrics,
      version: "0.0.1",
      elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -17,7 +17,7 @@ defmodule ZionMetrics.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {ZionMetrics, []},
+    [mod: {Metrics, []},
      applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :mariaex]]
   end

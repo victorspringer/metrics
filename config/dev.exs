@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :zionMetrics, ZionMetrics.Endpoint,
+config :metrics, Metrics.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -22,10 +22,10 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :zionMetrics, ZionMetrics.Repo,
+config :metrics, Metrics.Repo,
   adapter: Ecto.Adapters.MySQL,
   username: "root",
   password: "",
-  database: "zionmetrics_dev",
+  database: "metrics_dev",
   hostname: "localhost",
   pool_size: 10

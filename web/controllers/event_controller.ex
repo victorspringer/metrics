@@ -1,5 +1,5 @@
-defmodule ZionMetrics.EventController do
-  use ZionMetrics.Web, :controller
+defmodule Metrics.EventController do
+  use Metrics.Web, :controller
 
   def create(conn, %{"event" => event_params}) do
     changeset = Event.changeset(%Event{}, event_params)

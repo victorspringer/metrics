@@ -1,4 +1,4 @@
 ExUnit.start
 
-Ecto.Adapters.SQL.Sandbox.mode(ZionMetrics.Repo, {:shared, self()})
+Ecto.Adapters.SQL.Sandbox.mode(Metrics.Repo, {:shared, self()})
 
